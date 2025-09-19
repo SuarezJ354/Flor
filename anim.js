@@ -4,34 +4,33 @@ var lyrics = document.querySelector("#lyrics");
 
 // Array de objetos que contiene cada línea y su tiempo de aparición en segundos
 var lyricsData = [
-  { text: "Él la estaba esperando con una flor amarilla", time: 15 },
-  { text: "Ella lo estaba soñando con la luz en su pupila", time: 19 },
-  { text: "Y el amarillo de sol iluminaba la esquina", time: 23 },
-  { text: "(La esquina)", time: 27 },
-  { text: "Lo sentía tan cercano, lo sentía desde niña", time: 29 },
+  { text: "Él la estaba esperando con una flor amarilla", time: 17 },
+  { text: "Ella lo estaba soñando con la luz en su pupila", time: 23 },
+  { text: "Y el amarillo del sol iluminaba la esquina", time: 32 },
+  { text: "Lo sentía tan cercano, lo sentía desde niña", time: 40 },
   
-  { text: "Ella sabía que él sabía que algún día pasaría", time: 35 },
-  { text: "Que vendría a buscarla con sus flores amarillas", time: 40 },
-  { text: "No te apures, no detengas", time: 45 },
-  { text: "El instante del encuentro", time: 48 },
-  { text: "Está dicho que es un hecho", time: 50 },
-  { text: "No la pierdas, no hay derecho", time: 53 },
-  { text: "No te olvides que la vida casi nunca está dormida", time: 56 },
+  { text: "Ella sabía que él sabía que algún día pasaría", time: 46 },
+  { text: "Que vendría a buscarla con sus flores amarillas", time: 51 },
+  { text: "No te apures, no detengas el instante del encuentro", time: 60 },
+  { text: "Está dicho que es un hecho no la pierdas, no hay derecho", time: 63 },
+  { text: "No te olvides que la vida casi nunca está dormida", time: 66 },
   
-  { text: "En ese bar tan desierto los esperaba el encuentro", time: 75 },
-  { text: "(encuentro)", time: 80 },
-  { text: "Ella llegó en limusina amarilla por supuesto", time: 82 },
-  { text: "Él se acercó de repente y la miró tan de frente", time: 87 },
-  { text: "(de frente)", time: 91 },
-  { text: "Toda una vida soñada y no pudo decir nada", time: 93 },
+  { text: "En ese bar tan desierto los esperaba el encuentro", time: 94 },
+  { text: "Ella llegó en limusina amarilla por supuesto", time: 100 },
+  { text: "Él se acercó de repente y la miró tan de frente", time: 108 },
+  { text: "Toda una vida soñada y no pudo decir nada", time: 116 },
   
-  { text: "Ella sabía que él sabía que algún día pasaría", time: 99 },
-  { text: "Que vendría a buscarla con sus flores amarillas", time: 104 },
-  { text: "No te apures, no detengas", time: 109 },
-  { text: "El instante del encuentro", time: 112 },
-  { text: "Está dicho que es un hecho", time: 114 },
-  { text: "No la pierdas, no hay derecho", time: 117 },
-  { text: "No te olvides que la vida casi nunca está dormida", time: 120 },
+  { text: "Ella sabía que él sabía que algún día pasaría", time: 122 },
+  { text: "Que vendría a buscarla con sus flores amarillas", time: 127 },
+  { text: "No te apures, no detengas el instante del encuentro", time: 135 },
+  { text: "Está dicho que es un hecho no la pierdas, no hay derecho", time: 138 },
+  { text: "No te olvides que la vida casi nunca está dormida", time: 141 },
+  
+  { text: "Ella sabía que él sabía que algún día pasaría", time: 167 },
+  { text: "Que vendría a buscarla con sus flores amarillas", time: 172 },
+  { text: "No te apures, no detengas el instante del encuentro", time: 181 },
+  { text: "Está dicho que es un hecho no la pierdas, no hay derecho", time: 185 },
+  { text: "No te olvides que la vida casi nunca está dormida", time: 188 },
 ];
 
 // Animar las letras
@@ -69,5 +68,5 @@ function ocultarTitulo() {
   }, 3000); // Espera 3 segundos antes de ocultar completamente
 }
 
-// Llama a la función después de 140 segundos (ajustado para la duración de Flores Amarillas)
-setTimeout(ocultarTitulo, 140000);
+// Llama a la función después de 210 segundos (ajustado para la duración de Flores Amarillas)
+setTimeout(ocultarTitulo, 210000);
