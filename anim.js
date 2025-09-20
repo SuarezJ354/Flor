@@ -35,21 +35,37 @@ var lyricsData = [
 
 // Animar las letras
 function updateLyrics() {
-  var time = Math.floor(audio.currentTime);
-  var currentLine = lyricsData.find(
-    (line) => time >= line.time && time < line.time + 4
-  );
+  var time = audio.currentTime;
+  var currentLine = null;
+  
+  // Encuentra la línea actual
+  for (let i = 0; i < lyricsData.length; i++) {
+    if (time >= lyricsData[i].time) {
+      // Verifica si hay una línea siguiente
+      if (i + 1 < lyricsData.length) {
+        // Si el tiempo actual es menor que el tiempo de la siguiente línea
+        if (time < lyricsData[i + 1].time) {
+          currentLine = lyricsData[i];
+          break;
+        }
+      } else {
+        // Si es la última línea, mostrarla hasta el final
+        currentLine = lyricsData[i];
+        break;
+      }
+    }
+  }
 
   if (currentLine) {
-    // Calcula la opacidad basada en el tiempo en la línea actual
-    var fadeInDuration = 0.1; // Duración del efecto de aparición en segundos
-    var opacity = Math.min(1, (time - currentLine.time) / fadeInDuration);
+    // Efecto de aparición suave
+    var fadeInDuration = 0.3;
+    var timeSinceStart = time - currentLine.time;
+    var opacity = Math.min(1, timeSinceStart / fadeInDuration);
 
-    // Aplica el efecto de aparición
     lyrics.style.opacity = opacity;
     lyrics.innerHTML = currentLine.text;
   } else {
-    // Restablece la opacidad y el contenido si no hay una línea actual
+    // Si no hay línea actual, ocultar
     lyrics.style.opacity = 0;
     lyrics.innerHTML = "";
   }
